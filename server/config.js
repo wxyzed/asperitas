@@ -1,14 +1,13 @@
 module.exports = {
   port: 8080,
   db: {
-    prod: process.env.DATABASE_URL || 'mongodb://localhost/reddit',
+    prod: process.env.DATABASE_URL || 'mongodb+srv://admin:WAS123was@mycluster.s7tht.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
     test: 'mongodb://localhost/reddit_test',
     options: {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,
-      reconnectTries: Number.MAX_VALUE,
-      reconnectInterval: 500
+      useUnifiedTopology: true,
     }
   },
   jwt: {
